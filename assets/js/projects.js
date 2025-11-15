@@ -40,13 +40,13 @@ export const projects = [
     ],
   },
   {
-    title: "API Docs Portal",
-    description: "Redocly + Express powered API documentation and onboarding portal.",
+    title: "Know Your Positivity",
+    description: "A website that helps you know your positivity level.",
     links: [
       {
-        label: "Repository",
-        url: "https://github.com/sameer05515/api-docs-portal",
-        type: "repo",
+        label: "Live Demo",
+        url: "https://premendrakumar.github.io/know-your-positivity/",
+        type: "live",
       },
     ],
   },
