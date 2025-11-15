@@ -1,1 +1,8 @@
-{}
+{
+  "title": "Prem | Full Stack Developer",
+  "description": "Portfolio of Prem — Angular, React, Java",
+  "owner": "sameer05515",
+  "liveProjects": [
+    { "name": "Shrimad Bhagwat Geeta", "url": "https://sameer05515.github.io/smbg/" }
+  ]
+}

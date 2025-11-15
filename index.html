@@ -1,1 +1,154 @@
-<!DOCTYPE html><html><body>Full index content...</body></html>
+<!DOCTYPE html>
+<html lang="en" x-data="themeController()" :data-theme="theme">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Prem — Full Stack Developer</title>
+  <link href="assets/css/tailwind.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="assets/js/marked.min.js"></script>
+  <script defer src="assets/js/app.js"></script>
+</head>
+<body class="antialiased">
+
+  <!-- LOADER -->
+  <div id="loader" class="fixed inset-0 z-50 flex items-center justify-center bg-black/75">
+    <div class="w-20 h-20 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
+  </div>
+
+  <!-- PARTICLES CANVAS -->
+  <canvas id="particles" class="fixed inset-0 -z-10"></canvas>
+
+  <header class="sticky top-0 z-40 backdrop-blur bg-white/3 border-b border-white/5 p-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <div id="logo" class="logo-glow" aria-hidden="true">
+        <!-- SVG Logo -->
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 2 L15 8 L22 9 L17 14 L18 21 L12 18 L6 21 L7 14 L2 9 L9 8 Z"
+            stroke="black" stroke-width="0.8" fill="url(#grad)" />
+          <defs>
+            <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#7c5cff"/>
+              <stop offset="100%" stop-color="#00e0ff"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div>
+        <div class="font-bold">Prem</div>
+        <div class="text-xs text-slate-300">Full Stack Developer</div>
+      </div>
+    </div>
+
+    <nav class="flex items-center gap-3">
+      <a class="navlink" href="index.html">Home</a>
+      <a class="navlink" href="blog.html">Blog</a>
+      <a class="navlink" href="https://sameer05515.github.io/smbg/" target="_blank">Geeta</a>
+      <button @click="toggleTheme" class="px-3 py-1 rounded-md border border-white/10">
+        <span x-text="theme === 'dark' ? '☀️' : '🌙'"></span>
+      </button>
+      <button id="openChatBtn" class="ml-3 px-3 py-1 rounded-md bg-gradient-to-r from-indigo-600 to-cyan-400 text-black font-semibold">AI Chat</button>
+    </nav>
+  </header>
+
+  <main class="max-w-6xl mx-auto p-6">
+
+    <!-- HERO -->
+    <section class="neon-card grid md:grid-cols-2 gap-8 p-8 items-center">
+      <div class="avatar-frame relative overflow-hidden rounded-xl">
+        <div class="glow-ring absolute inset-[-18px] blur-3xl opacity-90"></div>
+        <img src="https://i.postimg.cc/htpFs5VY/default-avatar.png" alt="Prem" class="w-full h-full object-cover"/>
+      </div>
+      <div>
+        <h1 class="text-3xl font-extrabold">Hi, I'm Prem 👋</h1>
+        <p class="mt-3 text-slate-300">I build reliable and testable web apps — Angular, React, Java, DevOps and automation.</p>
+
+        <div class="mt-6 flex gap-3">
+          <a class="btn-primary" href="https://sameer05515.github.io/smbg/" target="_blank">View Geeta</a>
+          <a class="btn-outline" href="blog.html">Read Blog</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Verse of the Day -->
+    <section id="verse-of-day" class="neon-card mt-8 p-6" x-data="verseWidget()" x-init="loadVerse()">
+      <div class="flex justify-between items-start">
+        <h2 class="text-indigo-300 font-bold">📜 Verse of the Day</h2>
+        <button @click="loadVerse(true)" class="text-sm px-2 py-1 rounded-md border border-white/10">Next</button>
+      </div>
+      <div class="mt-4">
+        <div class="font-semibold text-xl text-indigo-100" x-text="verse"></div>
+        <div class="mt-2 text-slate-300" x-text="meaning"></div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="mt-8">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-grid mt-5">
+        <article class="project tilt-card">
+          <div class="meta flex justify-between items-start">
+            <h3 class="text-indigo-300 font-semibold">Shrimad Bhagwat Geeta</h3>
+            <div class="tags flex gap-2">
+              <span class="tag">Angular</span>
+              <span class="tag">GH Pages</span>
+            </div>
+          </div>
+          <p class="mt-2 text-slate-300">Spiritual app with verses & meaning.</p>
+          <div class="mt-3 flex gap-2">
+            <a class="btn-primary-sm" href="https://sameer05515.github.io/smbg/" target="_blank">Live</a>
+            <a class="btn-outline-sm" href="https://github.com/sameer05515/smbg" target="_blank">Code</a>
+          </div>
+        </article>
+
+        <!-- more project cards... (same structure) -->
+      </div>
+    </section>
+
+    <!-- Tools -->
+    <section id="tools" class="mt-10 neon-card p-6">
+      <h2 class="text-indigo-300">🛠 My Tools</h2>
+      <div class="mt-4 flex flex-wrap gap-3">
+        <span class="chip">Angular</span>
+        <span class="chip">React</span>
+        <span class="chip">TypeScript</span>
+        <span class="chip">Jest</span>
+        <span class="chip">Docker</span>
+        <span class="chip">GitHub Actions</span>
+        <span class="chip">Redocly</span>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- AI Chat Drawer -->
+  <div id="aiChat" class="fixed right-6 bottom-6 w-96 bg-white/6 border border-white/8 rounded-xl shadow-xl p-4 hidden">
+    <div class="flex justify-between items-center mb-2">
+      <div class="font-bold">AI Assistant</div>
+      <button id="closeChat" class="px-2 py-1 rounded bg-white/5">✕</button>
+    </div>
+    <div id="chatMessages" class="h-56 overflow-auto text-sm text-slate-100 mb-3"></div>
+    <div class="flex gap-2">
+      <input id="chatInput" class="flex-1 p-2 rounded bg-white/5 border border-white/6" placeholder="Ask me about projects..." />
+      <button id="sendChat" class="px-3 py-1 rounded bg-indigo-500 text-black font-semibold">Send</button>
+    </div>
+    <div class="text-xs text-slate-400 mt-2">AI integration: to enable live responses, create an API endpoint `/api/ai` that proxies to your chosen LLM (OpenAI). This UI will POST to it.</div>
+  </div>
+
+  <footer class="max-w-6xl mx-auto text-center p-6 text-slate-400">
+    Made with ❤️ by Prem • <a href="https://github.com/sameer05515" class="underline">GitHub</a>
+  </footer>
+
+  <script>
+    // Open/close AI chat (UI only). Actual API call code in app.js
+    document.getElementById('openChatBtn').addEventListener('click', ()=> {
+      document.getElementById('aiChat').classList.remove('hidden');
+      document.getElementById('chatInput').focus();
+    });
+    document.getElementById('closeChat').addEventListener('click', ()=> {
+      document.getElementById('aiChat').classList.add('hidden');
+    });
+  </script>
+</body>
+</html>

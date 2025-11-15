@@ -1,1 +1,14 @@
-/* custom styles full */
+/* small additions to Tailwind base */
+.neon-card{ border:1px solid rgba(255,255,255,0.04); background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:1rem; border-radius:12px; }
+.avatar-frame{ width:100%; height:100%; min-height:220px; }
+.glow-ring{ background: linear-gradient(90deg,#7c5cff,#00e0ff); filter: blur(30px); opacity:0.65; }
+.section-title{ color: #7c5cff; font-weight:700; font-size:1.25rem; }
+.projects-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1rem; }
+.project{ padding:1rem; border-radius:10px; border:1px solid rgba(255,255,255,0.03); background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent) }
+.chip{ background: linear-gradient(90deg,#7c5cff,#00e0ff); color:#041025; padding:6px 10px; border-radius:999px; font-weight:600; font-size:0.85rem; }
+.tag{ font-size:12px; padding:4px 8px; background:rgba(255,255,255,0.02); border-radius:8px; }
+.logo-glow{ width:44px; height:44px; border-radius:10px; display:grid; place-items:center; background:linear-gradient(135deg,#7c5cff,#00e0ff); box-shadow:0 8px 30px rgba(124,92,255,0.2); color:#051224; font-weight:800; }
+.btn-primary{ padding:10px 14px; border-radius:10px; background:linear-gradient(90deg,#7c5cff,#00e0ff); color:#041025; font-weight:700; }
+.btn-outline{ padding:10px 14px; border-radius:10px; border:1px solid rgba(255,255,255,0.06); color:#e6eefc; }
+.btn-primary-sm{ padding:6px 10px; border-radius:8px; background:linear-gradient(90deg,#7c5cff,#00e0ff); color:#041025; font-weight:700; font-size:0.9rem; }
+.btn-outline-sm{ padding:6px 10px; border-radius:8px; border:1px solid rgba(255,255,255,0.06); color:#e6eefc; font-size:0.9rem; }
