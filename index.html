@@ -1,210 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prem | Full Stack Developer</title>
 
-    <style>
-      :root {
-        --bg: #ffffff;
-        --text: #222222;
-        --card-bg: #f3f4f6;
-        --accent: #2563eb;
-      }
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
 
-      [data-theme="dark"] {
-        --bg: #0f172a;
-        --text: #e2e8f0;
-        --card-bg: #1e293b;
-        --accent: #38bdf8;
-      }
-
-      body {
-        margin: 0;
-        font-family: "Segoe UI", sans-serif;
-        background: var(--bg);
-        color: var(--text);
-        transition: 0.3s;
-      }
-
-      header {
-        display: flex;
-        justify-content: space-between;
-        padding: 20px 40px;
-        align-items: center;
-      }
-
-      .toggle-btn {
-        background: var(--card-bg);
-        border: none;
-        padding: 10px 16px;
-        border-radius: 25px;
-        cursor: pointer;
-        font-weight: 600;
-        color: var(--text);
-      }
-
-      .hero {
-        text-align: center;
-        padding: 60px 20px;
-        animation: fadeIn 1.2s ease-in-out;
-      }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .profile-pic {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        background: var(--card-bg);
-        margin: 0 auto 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 22px;
-        font-weight: bold;
-        color: var(--accent);
-      }
-
-      .projects {
-        max-width: 900px;
-        margin: 50px auto;
-        padding: 0 20px;
-      }
-
-      .projects h2 {
-        text-align: center;
-        margin-bottom: 30px;
-      }
-
-      .card-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 20px;
-      }
-
-      .card {
-        background: var(--card-bg);
-        padding: 20px;
-        border-radius: 15px;
-        transition: 0.3s;
-        border: 1px solid transparent;
-      }
-      .card:hover {
-        transform: translateY(-6px);
-        border-color: var(--accent);
-      }
-
-      .card h3 {
-        margin-top: 0;
-        color: var(--accent);
-      }
-
-      .card a {
-        display: inline-block;
-        margin-top: 10px;
-        text-decoration: none;
-        font-weight: bold;
-        color: var(--accent);
-      }
-
-      footer {
-        margin-top: 60px;
-        text-align: center;
-        padding: 20px;
-        color: var(--text);
-      }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2563eb",
+              accent: "#38bdf8",
+              surface: "#f8fafc",
+              "surface-dark": "#0f172a",
+            },
+            fontFamily: {
+              sans: ['"Inter"', '"Segoe UI"', "system-ui", "sans-serif"],
+            },
+            boxShadow: {
+              glow: "0 25px 65px -35px rgba(37, 99, 235, 0.65)",
+            },
+          },
+        },
+      };
+    </script>
   </head>
 
-  <body>
-    <header>
-      <h2>Prem</h2>
-      <button class="toggle-btn" onclick="toggleTheme()">🌙 Dark Mode</button>
-    </header>
-
-    <section class="hero">
-      <div class="profile-pic">Photo</div>
-      <h1>Hi, I'm Prem 👋</h1>
-      <p>Full Stack Developer • Java • React • Angular • DevOps Enthusiast</p>
-    </section>
-
-    <section class="projects">
-      <h2>🚀 My Projects</h2>
-      <div class="card-grid">
-        <div class="card">
-          <h3>Design Patterns Dashboard</h3>
-          <p>A comprehensive dashboard for design patterns.</p>
-          <a
-            href="https://sameer05515.github.io/design-patterns-dashboard/"
-            target="_blank"
-            >🔗 Live Demo</a
-          ><br />
-        </div>
-
-        <div class="card">
-          <h3>🌸 Shrimad Bhagwat Geeta</h3>
-          <p>A spiritual Angular app with verses, meaning, and more.</p>
-          <a href="https://sameer05515.github.io/smbg/" target="_blank"
-            >🔗 Live Demo</a
-          ><br />
-          <a href="https://github.com/sameer05515/smbg" target="_blank"
-            >📂 Code</a
+  <body
+    class="bg-surface text-slate-900 transition-colors duration-300 dark:bg-surface-dark dark:text-slate-100"
+  >
+    <div class="min-h-screen flex flex-col">
+      <header class="w-full">
+        <div
+          class="mx-auto flex w-full max-w-5xl items-center justify-between px-6 py-8"
+        >
+          <div>
+            <p class="text-xs uppercase tracking-[0.2em] text-primary/70">
+              Full Stack Developer
+            </p>
+            <h1 class="text-2xl font-semibold md:text-3xl">Prem</h1>
+          </div>
+          <button
+            type="button"
+            data-theme-toggle
+            class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-2 text-sm font-semibold text-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:shadow-glow dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
           >
+            <span data-theme-label>🌙 Dark Mode</span>
+          </button>
         </div>
+      </header>
 
-        <div class="card">
-          <h3>🧪 Unit Testing Playground</h3>
-          <p>Practice Jasmine, Karma, Jest & more.</p>
-          <a
-            href="https://github.com/sameer05515/unit-testing-playground"
-            target="_blank"
-            >📂 Repo</a
+      <main class="flex-1">
+        <section
+          class="fade-in mx-auto w-full max-w-5xl px-6 py-12 text-center sm:py-16"
+        >
+          <div class="profile-ring mb-8">
+            <div
+              class="flex h-36 w-36 items-center justify-center rounded-full bg-white text-2xl font-semibold text-primary dark:bg-slate-900"
+            >
+              Photo
+            </div>
+          </div>
+          <p class="text-sm uppercase tracking-[0.5em] text-primary/70">
+            Hi, I'm Prem 👋
+          </p>
+          <h2 class="mt-4 text-3xl font-bold leading-tight md:text-4xl">
+            Building reliable experiences across the stack.
+          </h2>
+          <p class="mx-auto mt-4 max-w-2xl text-base text-slate-600 dark:text-slate-300">
+            Full Stack Developer • Java • React • Angular • DevOps Enthusiast
+          </p>
+          <div
+            class="mt-8 flex flex-wrap items-center justify-center gap-3 text-sm font-medium text-slate-600 dark:text-slate-300"
           >
-        </div>
+            <span class="pill">Java</span>
+            <span class="pill">React</span>
+            <span class="pill">Angular</span>
+            <span class="pill">Tailwind CSS</span>
+            <span class="pill">DevOps</span>
+          </div>
+        </section>
 
-        <div class="card">
-          <h3>📘 API Docs Portal</h3>
-          <p>Redocly + Express based API documentation portal.</p>
-          <a
-            href="https://github.com/sameer05515/api-docs-portal"
-            target="_blank"
-            >📂 Repo</a
-          >
-        </div>
-      </div>
-    </section>
+        <section class="mx-auto w-full max-w-5xl px-6 py-12">
+          <div class="text-center">
+            <p class="text-sm uppercase tracking-[0.5em] text-primary/70">
+              🚀 Selected Work
+            </p>
+            <h3 class="mt-3 text-3xl font-semibold">My Projects</h3>
+            <p class="mx-auto mt-3 max-w-2xl text-sm text-slate-500 dark:text-slate-300">
+              A snapshot of products, experiments, and learning playgrounds that
+              keep me curious.
+            </p>
+          </div>
 
-    <footer>
-      Made with ❤️ by Prem •
-      <a href="https://github.com/sameer05515" style="color: var(--accent)"
-        >GitHub Profile</a
+          <div
+            id="projectsGrid"
+            class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+          ></div>
+        </section>
+      </main>
+
+      <footer
+        class="border-t border-slate-200 px-6 py-8 text-center text-sm text-slate-500 dark:border-slate-800 dark:text-slate-400"
       >
-    </footer>
+        Made with ❤️ by Prem •
+        <a
+          href="https://github.com/sameer05515"
+          class="font-semibold text-primary hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub Profile
+        </a>
+      </footer>
+    </div>
 
-    <script>
-      function toggleTheme() {
-        const html = document.documentElement;
-        const btn = document.querySelector(".toggle-btn");
-
-        if (html.getAttribute("data-theme") === "dark") {
-          html.setAttribute("data-theme", "light");
-          btn.textContent = "🌙 Dark Mode";
-        } else {
-          html.setAttribute("data-theme", "dark");
-          btn.textContent = "☀️ Light Mode";
-        }
-      }
-    </script>
+    <script type="module" src="assets/js/main.js"></script>
   </body>
 </html>
