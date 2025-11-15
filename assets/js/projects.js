@@ -50,5 +50,16 @@ export const projects = [
       },
     ],
   },
+  {
+    title: "My Pages",
+    description: "A website that shows my pages.",
+    links: [
+      {
+        label: "Live Demo",
+        url: "https://sameer05515.github.io/my-pages/",
+        type: "live",
+      },
+    ],
+  }
 ];
 
