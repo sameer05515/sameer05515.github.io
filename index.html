@@ -1,185 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prem | Full Stack Developer</title>
 
     <style>
-        :root {
-            --bg: #ffffff;
-            --text: #222222;
-            --card-bg: #f3f4f6;
-            --accent: #2563eb;
-        }
+      :root {
+        --bg: #ffffff;
+        --text: #222222;
+        --card-bg: #f3f4f6;
+        --accent: #2563eb;
+      }
 
-        [data-theme="dark"] {
-            --bg: #0f172a;
-            --text: #e2e8f0;
-            --card-bg: #1e293b;
-            --accent: #38bdf8;
-        }
+      [data-theme="dark"] {
+        --bg: #0f172a;
+        --text: #e2e8f0;
+        --card-bg: #1e293b;
+        --accent: #38bdf8;
+      }
 
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            transition: 0.3s;
-        }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        transition: 0.3s;
+      }
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px 40px;
-            align-items: center;
-        }
+      header {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 40px;
+        align-items: center;
+      }
 
-        .toggle-btn {
-            background: var(--card-bg);
-            border: none;
-            padding: 10px 16px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-weight: 600;
-            color: var(--text);
-        }
+      .toggle-btn {
+        background: var(--card-bg);
+        border: none;
+        padding: 10px 16px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: 600;
+        color: var(--text);
+      }
 
-        .hero {
-            text-align: center;
-            padding: 60px 20px;
-            animation: fadeIn 1.2s ease-in-out;
-        }
+      .hero {
+        text-align: center;
+        padding: 60px 20px;
+        animation: fadeIn 1.2s ease-in-out;
+      }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to   { opacity: 1; transform: translateY(0); }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
         }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background: var(--card-bg);
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            font-weight: bold;
-            color: var(--accent);
-        }
+      .profile-pic {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: var(--card-bg);
+        margin: 0 auto 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        font-weight: bold;
+        color: var(--accent);
+      }
 
-        .projects {
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 0 20px;
-        }
+      .projects {
+        max-width: 900px;
+        margin: 50px auto;
+        padding: 0 20px;
+      }
 
-        .projects h2 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+      .projects h2 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
 
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-        }
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+      }
 
-        .card {
-            background: var(--card-bg);
-            padding: 20px;
-            border-radius: 15px;
-            transition: 0.3s;
-            border: 1px solid transparent;
-        }
-        .card:hover {
-            transform: translateY(-6px);
-            border-color: var(--accent);
-        }
+      .card {
+        background: var(--card-bg);
+        padding: 20px;
+        border-radius: 15px;
+        transition: 0.3s;
+        border: 1px solid transparent;
+      }
+      .card:hover {
+        transform: translateY(-6px);
+        border-color: var(--accent);
+      }
 
-        .card h3 {
-            margin-top: 0;
-            color: var(--accent);
-        }
+      .card h3 {
+        margin-top: 0;
+        color: var(--accent);
+      }
 
-        .card a {
-            display: inline-block;
-            margin-top: 10px;
-            text-decoration: none;
-            font-weight: bold;
-            color: var(--accent);
-        }
+      .card a {
+        display: inline-block;
+        margin-top: 10px;
+        text-decoration: none;
+        font-weight: bold;
+        color: var(--accent);
+      }
 
-        footer {
-            margin-top: 60px;
-            text-align: center;
-            padding: 20px;
-            color: var(--text);
-        }
+      footer {
+        margin-top: 60px;
+        text-align: center;
+        padding: 20px;
+        color: var(--text);
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <header>
-        <h2>Prem</h2>
-        <button class="toggle-btn" onclick="toggleTheme()">🌙 Dark Mode</button>
+      <h2>Prem</h2>
+      <button class="toggle-btn" onclick="toggleTheme()">🌙 Dark Mode</button>
     </header>
 
     <section class="hero">
-        <div class="profile-pic">
-            Photo
-        </div>
-        <h1>Hi, I'm Prem 👋</h1>
-        <p>Full Stack Developer • Java • React • Angular • DevOps Enthusiast</p>
+      <div class="profile-pic">Photo</div>
+      <h1>Hi, I'm Prem 👋</h1>
+      <p>Full Stack Developer • Java • React • Angular • DevOps Enthusiast</p>
     </section>
 
     <section class="projects">
-        <h2>🚀 My Projects</h2>
-        <div class="card-grid">
-
-            <div class="card">
-                <h3>🌸 Shrimad Bhagwat Geeta</h3>
-                <p>A spiritual Angular app with verses, meaning, and more.</p>
-                <a href="https://sameer05515.github.io/smbg/" target="_blank">🔗 Live Demo</a><br>
-                <a href="https://github.com/sameer05515/smbg" target="_blank">📂 Code</a>
-            </div>
-
-            <div class="card">
-                <h3>🧪 Unit Testing Playground</h3>
-                <p>Practice Jasmine, Karma, Jest & more.</p>
-                <a href="https://github.com/sameer05515/unit-testing-playground" target="_blank">📂 Repo</a>
-            </div>
-
-            <div class="card">
-                <h3>📘 API Docs Portal</h3>
-                <p>Redocly + Express based API documentation portal.</p>
-                <a href="https://github.com/sameer05515/api-docs-portal" target="_blank">📂 Repo</a>
-            </div>
-
+      <h2>🚀 My Projects</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Design Patterns Dashboard</h3>
+          <p>A comprehensive dashboard for design patterns.</p>
+          <a
+            href="https://sameer05515.github.io/design-patterns-dashboard/"
+            target="_blank"
+            >🔗 Live Demo</a
+          ><br />
         </div>
+
+        <div class="card">
+          <h3>🌸 Shrimad Bhagwat Geeta</h3>
+          <p>A spiritual Angular app with verses, meaning, and more.</p>
+          <a href="https://sameer05515.github.io/smbg/" target="_blank"
+            >🔗 Live Demo</a
+          ><br />
+          <a href="https://github.com/sameer05515/smbg" target="_blank"
+            >📂 Code</a
+          >
+        </div>
+
+        <div class="card">
+          <h3>🧪 Unit Testing Playground</h3>
+          <p>Practice Jasmine, Karma, Jest & more.</p>
+          <a
+            href="https://github.com/sameer05515/unit-testing-playground"
+            target="_blank"
+            >📂 Repo</a
+          >
+        </div>
+
+        <div class="card">
+          <h3>📘 API Docs Portal</h3>
+          <p>Redocly + Express based API documentation portal.</p>
+          <a
+            href="https://github.com/sameer05515/api-docs-portal"
+            target="_blank"
+            >📂 Repo</a
+          >
+        </div>
+      </div>
     </section>
 
     <footer>
-        Made with ❤️ by Prem • <a href="https://github.com/sameer05515" style="color:var(--accent);">GitHub Profile</a>
+      Made with ❤️ by Prem •
+      <a href="https://github.com/sameer05515" style="color: var(--accent)"
+        >GitHub Profile</a
+      >
     </footer>
 
     <script>
-        function toggleTheme() {
-            const html = document.documentElement;
-            const btn = document.querySelector('.toggle-btn');
+      function toggleTheme() {
+        const html = document.documentElement;
+        const btn = document.querySelector(".toggle-btn");
 
-            if (html.getAttribute("data-theme") === "dark") {
-                html.setAttribute("data-theme", "light");
-                btn.textContent = "🌙 Dark Mode";
-            } else {
-                html.setAttribute("data-theme", "dark");
-                btn.textContent = "☀️ Light Mode";
-            }
+        if (html.getAttribute("data-theme") === "dark") {
+          html.setAttribute("data-theme", "light");
+          btn.textContent = "🌙 Dark Mode";
+        } else {
+          html.setAttribute("data-theme", "dark");
+          btn.textContent = "☀️ Light Mode";
         }
+      }
     </script>
-
-</body>
+  </body>
 </html>
