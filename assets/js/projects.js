@@ -6,7 +6,7 @@ export const projects = [
     links: [
       {
         label: "Live Demo",
-        url: "https://sameer05515.github.io/design-patterns-dashboard/",
+        url: "https://sameer05515.github.io/design-patterns/",
         type: "live",
       },
     ],
