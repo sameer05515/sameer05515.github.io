@@ -1,7 +1,8 @@
 export const projects = [
   {
     title: "Design Patterns Dashboard",
-    description: "A comprehensive dashboard for visualizing core design patterns.",
+    description:
+      "A comprehensive dashboard for visualizing core design patterns.",
     badge: "Featured",
     links: [
       {
@@ -60,6 +61,17 @@ export const projects = [
         type: "live",
       },
     ],
-  }
+  },
+  {
+    title: "Welcome 2026: Resolutions Tracker",
+    description:
+      "A web app to set, track, and achieve your New Year's resolutions for 2026.",
+    links: [
+      {
+        label: "Live Demo",
+        url: "https://sameer05515.github.io/welcome-2026/index.html",
+        type: "live",
+      },
+    ],
+  },
 ];
-
