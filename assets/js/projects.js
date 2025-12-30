@@ -86,4 +86,16 @@ export const projects = [
       },
     ],
   },
+  {
+    title: "SIP calculator",
+    description:
+      "A web app to calculate the SIP returns.",
+    links: [
+      {
+        label: "Live Demo",
+        url: "https://sameer05515.github.io/sip-calculator/",
+        type: "live",
+      },
+    ],
+  },
 ];
