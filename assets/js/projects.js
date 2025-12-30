@@ -74,4 +74,16 @@ export const projects = [
       },
     ],
   },
+  {
+    title: "Gold rate calculator",
+    description:
+      "A web app to calculate the gold rate.",
+    links: [
+      {
+        label: "Live Demo",
+        url: "https://sameer05515.github.io/gold-rate-calculator/",
+        type: "live",
+      },
+    ],
+  },
 ];
