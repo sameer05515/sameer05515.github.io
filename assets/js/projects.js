@@ -16,6 +16,7 @@ export const projects = [
     title: "Shrimad Bhagwat Geeta",
     description:
       "A spiritual Angular app with verses, translations, and immersive reading flows.",
+    badge: "Featured",
     links: [
       {
         label: "Live Demo",
@@ -43,6 +44,7 @@ export const projects = [
   {
     title: "Know Your Positivity",
     description: "A website that helps you know your positivity level.",
+    badge: "Featured",
     links: [
       {
         label: "Live Demo",
@@ -66,6 +68,7 @@ export const projects = [
     title: "Welcome 2026: Resolutions Tracker",
     description:
       "A web app to set, track, and achieve your New Year's resolutions for 2026.",
+    badge: "Featured",
     links: [
       {
         label: "Live Demo",
@@ -76,8 +79,8 @@ export const projects = [
   },
   {
     title: "Gold rate calculator",
-    description:
-      "A web app to calculate the gold rate.",
+    description: "A web app to calculate the gold rate.",
+    badge: "Featured",
     links: [
       {
         label: "Live Demo",
@@ -88,8 +91,8 @@ export const projects = [
   },
   {
     title: "SIP calculator",
-    description:
-      "A web app to calculate the SIP returns.",
+    description: "A web app to calculate the SIP returns.",
+    badge: "Featured",
     links: [
       {
         label: "Live Demo",
