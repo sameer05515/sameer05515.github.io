@@ -13,6 +13,19 @@ export const projects = [
     ],
   },
   {
+    title: "Solid Principles Dashboard",
+    description:
+      "A comprehensive dashboard for visualizing core solid principles.",
+    badge: "Featured",
+    links: [
+      {
+        label: "Live Demo",
+        url: "https://sameer05515.github.io/solid-principles/",
+        type: "live",
+      },
+    ],
+  },
+  {
     title: "Shrimad Bhagwat Geeta",
     description:
       "A spiritual Angular app with verses, translations, and immersive reading flows.",
