@@ -114,4 +114,15 @@ export const projects = [
       },
     ],
   },
+  {
+    title: "Stavya Para Paroktih",
+    description: "A web project for exploring interpretations of classical Sanskrit subhāṣitas (wise sayings) with parallel references.",
+    links: [
+      {
+        label: "Live Demo",
+        url: "https://sameer05515.github.io/stavya-para-paroktih/",
+        type: "live",
+      },
+    ],
+  },
 ];
