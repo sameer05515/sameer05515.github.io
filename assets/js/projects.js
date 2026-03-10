@@ -125,4 +125,15 @@ export const projects = [
       },
     ],
   },
+  {
+    title: "Stavya Para Paroktih - Interview Questions",
+    description: "A curated collection of technical interview questions and answers, presented as part of the Stavya Para Paroktih project.",
+    links: [
+      {
+        label: "Live Demo",
+        url: "https://sameer05515.github.io/stavya-para-paroktih/interview-questions.html",
+        type: "live",
+      },
+    ],
+  },
 ];
