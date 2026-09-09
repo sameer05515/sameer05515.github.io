@@ -138,7 +138,7 @@ export const projects = [
   },
   {
     title:"question-bank-viewer",
-    description:"question-bank-viewer",
+    description:"A lightweight web application for browsing and exploring interview questions organized by topics and tags. Provides a clean, focused interface to quickly navigate questions, track preparation, and review answers efficiently.",
     links:[
       {
         label:"Live Demo",
