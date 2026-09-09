@@ -136,4 +136,15 @@ export const projects = [
       },
     ],
   },
+  {
+    title:"question-bank-viewer",
+    description:"question-bank-viewer",
+    links:[
+      {
+        label:"Live Demo",
+        url:"https://sameer05515.github.io/question-bank-viewer",
+        type:"live"
+      }
+    ]
+  }
 ];
