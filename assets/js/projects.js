@@ -137,13 +137,24 @@ export const projects = [
     ],
   },
   {
-    title:"question-bank-viewer",
-    description:"A lightweight web application for browsing and exploring interview questions organized by topics and tags. Provides a clean, focused interface to quickly navigate questions, track preparation, and review answers efficiently.",
-    links:[
+    title: "question-bank-viewer",
+    description: "A lightweight web application for browsing and exploring interview questions organized by topics and tags. Provides a clean, focused interface to quickly navigate questions, track preparation, and review answers efficiently.",
+    links: [
       {
-        label:"Live Demo",
-        url:"https://sameer05515.github.io/question-bank-viewer",
-        type:"live"
+        label: "Live Demo",
+        url: "https://sameer05515.github.io/question-bank-viewer",
+        type: "live"
+      }
+    ]
+  },
+  {
+    title: "vocab-khajana-alpine-v2",
+    description: "A lightweight vocabulary learning web application built with Alpine.js and Tailwind CSS. Provides search across words, meanings and examples, Word of the Day, random word discovery, bookmarks, recently viewed words, pronunciation, dark mode, keyboard navigation, and an interactive 10-question vocabulary quiz with localStorage-based progress tracking.",
+    links: [
+      {
+        label: "Live Demo",
+        url: "https://sameer05515.github.io/vocab-khajana-alpine-v2/",
+        type: "live"
       }
     ]
   }
