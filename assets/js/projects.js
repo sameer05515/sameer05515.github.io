@@ -157,5 +157,16 @@ export const projects = [
         type: "live"
       }
     ]
+  },
+  {
+    title: "interview-preparation-roadmap-alpine-v2",
+    description: "A modular Java Full Stack interview preparation roadmap built with Alpine.js. Covers granular interview topics across Core Java, Spring Boot, Spring Security, Microservices, Database, React, Docker, Kubernetes, AWS, and System Design, with searchable topics, progress tracking, daily execution targets, and a production-oriented capstone roadmap.",
+    links: [
+      {
+        label: "Live Demo",
+        url: "https://sameer05515.github.io/interview-preparation-roadmap-alpine/",
+        type: "live"
+      }
+    ]
   }
 ];
