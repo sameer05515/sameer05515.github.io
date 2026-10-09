@@ -199,7 +199,7 @@ export const projects = [
   },
   {
     title:"javascript-coding-questions-answers",
-    description:"A JavaScript coding interview preparation platform featuring 50 frequently asked JavaScript questions with code examples, explanations, difficulty levels, category filters, search, syntax highlighting, and progress tracking. Built with HTML, Alpine.js, Tailwind CSS, and JSON-based question data with UUID-based IDs.",
+    description:"A JavaScript coding interview preparation platform featuring 50+ frequently asked JavaScript questions with code examples, explanations, difficulty levels, category filters, search, syntax highlighting, and progress tracking. Built with HTML, Alpine.js, Tailwind CSS, and JSON-based question data with UUID-based IDs.",
     links:[
       {
         label:"Live Demo",
