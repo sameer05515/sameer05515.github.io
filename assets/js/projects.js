@@ -186,4 +186,15 @@ export const projects = [
       },
     ],
   },
+  {
+    title:"java-coding-questions-answers",
+    description:"A Java coding interview preparation platform featuring 100+ frequently asked coding questions with solutions, explanations, time and space complexity, syntax highlighting, category filters, search, bookmarks, and progress tracking. Built with HTML, Alpine.js, Marked.js, and Tailwind CSS. Questions and answers are stored in JSON files with UUID-based IDs.",
+    links:[
+      {
+        label:"Live Demo",
+        url:"https://sameer05515.github.io/java-coding-questions-answers/",
+        type:"live"
+      }
+    ]
+  }
 ];
