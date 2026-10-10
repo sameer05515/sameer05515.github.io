@@ -207,5 +207,16 @@ export const projects = [
         type:"live"
       }
     ]
+  },
+  {
+    title:"kebab-case-converter",
+    description:"Convert any string into kebab-case instantly.",
+    links:[
+      {
+        label:"Live Demo",
+        url:"https://sameer05515.github.io/kebab-case-converter/",
+        type:"live"
+      }
+    ]
   }
 ];
